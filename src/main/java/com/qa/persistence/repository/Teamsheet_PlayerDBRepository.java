@@ -38,6 +38,11 @@ public class Teamsheet_PlayerDBRepository implements Teamsheet_PlayerRepository 
 		return jsonOb.getJSONForObject(Teamsheet_Players);
 	}	
 	
+	public String getAllTeamsheet_PlayersWithPlayerId(String playerId) {
+		TypedQuery<Teamsheet_Player> query = manager.createQuery("Select ts FROM Teamsheet_Player AS ts where ts.playerId = '"+playerId+"'", Teamsheet_Player.class);
+		Collection<Teamsheet_Player> Teamsheet_Players = (Collection<Teamsheet_Player>) query.getResultList();
+		return jsonOb.getJSONForObject(Teamsheet_Players);
+	}
 	
 	@Transactional(REQUIRED)
 	public String createTeamsheet_Player(String Teamsheet_Player) {

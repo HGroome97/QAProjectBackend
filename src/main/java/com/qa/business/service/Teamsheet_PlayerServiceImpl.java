@@ -20,6 +20,10 @@ public class Teamsheet_PlayerServiceImpl implements Teamsheet_PlayerService {
 	public String getAllTeamsheet_PlayersWithTeamsheetId(String teamsheetId) {
 		return repo.getAllTeamsheet_PlayersWithTeamsheetId(teamsheetId);
 	}
+	
+	public String getAllTeamsheet_PlayersWithPlayerId(String playerId) {
+		return repo.getAllTeamsheet_PlayersWithPlayerId(playerId);
+	}
 
 	public String createTeamsheet_Player(String tsp) {
 		return repo.createTeamsheet_Player(tsp);
