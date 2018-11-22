@@ -34,6 +34,20 @@ public class PlayerEndpoint {
 		return service.getAllPlayers();
 	}
 
+	@Path("/getAllPlayersWithTeamName/{teamName}")
+	@GET
+	@Produces({ "application/json" })
+	public String getAllPlayersWithTeamName(@PathParam("teamName") String teamName ) {
+		return service.getAllPlayersWithTeamName(teamName);
+	}
+	
+	@Path("/getAllPlayersWithoutTeamName/{teamName}")
+	@GET
+	@Produces({ "application/json" })
+	public String getAllPlayersWithoutTeamName(@PathParam("teamName") String teamName ) {
+		return service.getAllPlayersWithoutTeamName(teamName);
+	}
+
 	@Path("/createPlayer")
 	@POST
 	@Produces({ "application/json" })

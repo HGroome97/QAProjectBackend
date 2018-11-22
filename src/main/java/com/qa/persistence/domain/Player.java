@@ -20,6 +20,8 @@ public class Player {
 	private String fName;
 	private String lName;
 	private int rating;
+	private int price;
+	private String team;
 	
 
 	
@@ -70,9 +72,26 @@ public class Player {
 		this.rating = rating;
 	}
 
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
+
 	@Override
 	public String toString() {
-		return "Player [playerId=" + playerId + ", fName=" + fName + ", lName=" + lName + ", rating=" + rating + "]";
+		return "Player [playerId=" + playerId + ", fName=" + fName + ", lName=" + lName + ", rating=" + rating
+				+ ", price=" + price + ", team=" + team + "]";
 	}
 
 

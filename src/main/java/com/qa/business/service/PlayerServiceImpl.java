@@ -18,6 +18,14 @@ public class PlayerServiceImpl implements PlayerService {
 		return repo.getAllPlayers();
 	}
 
+	public String getAllPlayersWithTeamName(String teamName) {
+		return repo.getAllPlayersWithTeamName(teamName);
+	}
+
+	public String getAllPlayersWithoutTeamName(String teamName){
+		return repo.getAllPlayersWithoutTeamName(teamName);
+	}
+
 	public String createPlayer(String t) {
 		return repo.createPlayer(t);
 	}

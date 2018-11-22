@@ -10,9 +10,11 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
 
 import com.qa.persistence.domain.Teamsheet;
+import com.qa.persistence.domain.Teamsheet_Player;
 import com.qa.persistence.domain.Player;
 import com.qa.util.JSONUtil;
 
@@ -30,6 +32,18 @@ public class PlayerDBRepository implements PlayerRepository {
 		Query query = manager.createQuery("Select t FROM Player t");
 		Collection<Player> players = (Collection<Player>) query.getResultList();
 		return jsonOb.getJSONForObject(players);
+	}
+	
+	public String getAllPlayersWithTeamName(String teamName) {
+		TypedQuery<Player> query = manager.createQuery("Select p FROM Player AS p where p.team = '"+teamName+"'", Player.class);
+		Collection<Player> Players = (Collection<Player>) query.getResultList();
+		return jsonOb.getJSONForObject(Players);
+	}
+	
+	public String getAllPlayersWithoutTeamName(String teamName) {
+		TypedQuery<Player> query = manager.createQuery("Select p FROM Player AS p where p.team <> '"+teamName+"'", Player.class);
+		Collection<Player> Players = (Collection<Player>) query.getResultList();
+		return jsonOb.getJSONForObject(Players);
 	}
 	
 	@Transactional(REQUIRED)
@@ -59,6 +73,8 @@ public class PlayerDBRepository implements PlayerRepository {
 		playerInDB.setfName(p.getfName());
 		playerInDB.setlName(p.getlName());
 		playerInDB.setRating(p.getRating());
+		playerInDB.setPrice(p.getPrice());
+		playerInDB.setTeam(p.getTeam());
 		return "{\"message\": \"Player has been sucessfully updated\"}";
 	}
 	
