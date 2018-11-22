@@ -27,6 +27,7 @@ public class PlayerEndpoint {
 	@Inject
 	private JSONUtil jsonOb;
 	
+	
 	@Path("/getAllPlayers")
 	@GET
 	@Produces({ "application/json" })
