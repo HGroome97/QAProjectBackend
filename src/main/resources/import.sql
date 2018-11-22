@@ -1,21 +1,19 @@
 insert into teamsheet (numDefenders, numMidfielders, numAttackers, saveName) values ( 3, 4, 3, 'John');
 insert into teamsheet (numDefenders, numMidfielders, numAttackers, saveName) values (5, 3, 2, 'Matt');
 
-insert into player (fname, lname) values ('Gareth', 'the'); 
-insert into player (fname, lname) values ('Alvin', 'the'); 
-insert into player (fname, lname) values ('Goal', 'Keeper'); 
-insert into player (fname, lname) values ('Matt', 'T'); 
-insert into player (fname, lname) values ('Lewis', 'Webb'); 
-insert into player (fname, lname) values ('Adonay', 'G'); 
-insert into player (fname, lname) values ('Harrison', 'G'); 
-insert into player (fname, lname) values ('Trainer', 'Tim'); 
-insert into player (fname, lname) values ('Example', '1'); 
-insert into player (fname, lname) values ('Almost', 'There'); 
-insert into player (fname, lname) values ('Last', 'One'); 
-insert into player (fname, lname) values ('Sub', '1'); 
-insert into player (fname, lname) values ('Sub', '2'); 
-
-
+insert into player (fname, lname, rating) values ('Gareth', 'the',78); 
+insert into player (fname, lname, rating) values ('Alvin', 'the',90); 
+insert into player (fname, lname, rating) values ('Goal', 'Keeper',43); 
+insert into player (fname, lname, rating) values ('Matt', 'T',34); 
+insert into player (fname, lname, rating) values ('Lewis', 'Webb',87); 
+insert into player (fname, lname, rating) values ('Adonay', 'G',90); 
+insert into player (fname, lname, rating) values ('Harrison', 'G',90); 
+insert into player (fname, lname, rating) values ('Trainer', 'Tim',45); 
+insert into player (fname, lname, rating) values ('Example', '1',32); 
+insert into player (fname, lname, rating) values ('Almost', 'There',56); 
+insert into player (fname, lname, rating) values ('Last', 'One',67); 
+insert into player (fname, lname, rating) values ('Sub', '1',78); 
+insert into player (fname, lname, rating) values ('Sub', '2',89); 
 
 
 insert into teamsheet_player (teamsheet_teamsheetid,players_playerid) values (1,1);

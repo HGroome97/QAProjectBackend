@@ -58,6 +58,7 @@ public class PlayerDBRepository implements PlayerRepository {
 		Player playerInDB = findPlayer(p.getPlayerId());
 		playerInDB.setfName(p.getfName());
 		playerInDB.setlName(p.getlName());
+		playerInDB.setRating(p.getRating());
 		return "{\"message\": \"Player has been sucessfully updated\"}";
 	}
 	

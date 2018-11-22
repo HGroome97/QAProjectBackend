@@ -19,8 +19,8 @@ public class Player {
 	
 	private String fName;
 	private String lName;
+	private int rating;
 	
-
 
 	
 	public Player() {
@@ -62,9 +62,17 @@ public class Player {
 		this.playerId = playerId;
 	}
 
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int rating) {
+		this.rating = rating;
+	}
+
 	@Override
 	public String toString() {
-		return "Player [playerId=" + playerId + ", fName=" + fName + ", lName=" + lName + "]";
+		return "Player [playerId=" + playerId + ", fName=" + fName + ", lName=" + lName + ", rating=" + rating + "]";
 	}
 
 
