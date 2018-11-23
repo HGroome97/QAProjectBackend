@@ -12,6 +12,8 @@ public class GameInfo {
 	private long gameId;
 	private String saveName;
 	private int money;
+	private int lastHomeScore;
+	private int lastAwayScore;
 	
 	
 	public long getGameId() {
@@ -41,6 +43,26 @@ public class GameInfo {
 
 	public void setMoney(int money) {
 		this.money = money;
+	}
+
+
+	public int getLastHomeScore() {
+		return lastHomeScore;
+	}
+
+
+	public void setLastHomeScore(int lastHomeScore) {
+		this.lastHomeScore = lastHomeScore;
+	}
+
+
+	public int getLastAwayScore() {
+		return lastAwayScore;
+	}
+
+
+	public void setLastAwayScore(int lastAwayScore) {
+		this.lastAwayScore = lastAwayScore;
 	}
 
 

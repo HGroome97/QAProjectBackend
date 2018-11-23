@@ -14,7 +14,12 @@ insert into player (fname, lname, rating, price, team) values ('Almost', 'There'
 insert into player (fname, lname, rating, price, team) values ('Last', 'One',67, 2, 'myTeam'); 
 insert into player (fname, lname, rating, price, team) values ('Sub', '1',78, 23, 'myTeam'); 
 insert into player (fname, lname, rating, price, team) values ('Sub', '2',89, 70, 'myTeam'); 
-insert into player (fname, lname, rating, price, team) values ('Steve', 'Gerrard',99, 120, 'Another Team'); 
+insert into player (fname, lname, rating, price, team) values ('Steve', 'Gerrard',99, 120, 'Liverpool'); 
+insert into player (fname, lname, rating, price, team) values ('Romelu', 'Lukaku',88, 70, 'Man Utd'); 
+insert into player (fname, lname, rating, price, team) values ('Sergio', 'Aguero',94, 100, 'Man City'); 
+
+
+insert into gameinfo(saveName, money, lastHomeScore, lastAwayScore) values ('DEFAULT FC', 100, -1,-1);
 
 
 insert into teamsheet_player (teamsheet_teamsheetid,players_playerid) values (1,1);
