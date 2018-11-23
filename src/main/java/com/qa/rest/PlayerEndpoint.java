@@ -27,11 +27,26 @@ public class PlayerEndpoint {
 	@Inject
 	private JSONUtil jsonOb;
 	
+	
 	@Path("/getAllPlayers")
 	@GET
 	@Produces({ "application/json" })
 	public String getAllPlayers() {
 		return service.getAllPlayers();
+	}
+
+	@Path("/getAllPlayersWithTeamName/{teamName}")
+	@GET
+	@Produces({ "application/json" })
+	public String getAllPlayersWithTeamName(@PathParam("teamName") String teamName ) {
+		return service.getAllPlayersWithTeamName(teamName);
+	}
+	
+	@Path("/getAllPlayersWithoutTeamName/{teamName}")
+	@GET
+	@Produces({ "application/json" })
+	public String getAllPlayersWithoutTeamName(@PathParam("teamName") String teamName ) {
+		return service.getAllPlayersWithoutTeamName(teamName);
 	}
 
 	@Path("/createPlayer")
