@@ -36,7 +36,47 @@
 	</profiles>
 
     <dependencies>
-   <dependency>
+    
+    <dependency>
+    	<groupId>org.seleniumhq.selenium</groupId>
+    	<artifactId>selenium-java</artifactId>
+    	<version>3.141.59</version>
+	</dependency>
+	
+	<dependency>
+        <artifactId>guava</artifactId>
+        <groupId>com.google.guava</groupId>
+        <type>jar</type>
+        <version>15.0</version>
+</dependency>
+	
+	<dependency>
+		<groupId>info.cukes</groupId>
+		<artifactId>cucumber-java</artifactId>
+		<version>1.2.4</version>
+		<scope>test</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>info.cukes</groupId>
+		<artifactId>cucumber-junit</artifactId>
+		<version>1.2.4</version>
+		<scope>test</scope>
+	</dependency>
+	
+	<dependency>
+            <groupId>com.relevantcodes</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>2.41.2</version>
+	</dependency>
+    
+    <dependency>
+    	<groupId>org.freemarker</groupId>
+    	<artifactId>freemarker</artifactId>
+    	<version>2.3.28</version>
+	</dependency>
+	
+	<dependency>
             <groupId>javax.enterprise</groupId>
             <artifactId>cdi-api</artifactId>
             <scope>provided</scope>
